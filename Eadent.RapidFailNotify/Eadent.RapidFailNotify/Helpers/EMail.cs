@@ -4,6 +4,7 @@ using MimeKit;
 using Newtonsoft.Json;
 using System;
 using System.IO;
+using System.Reflection;
 
 namespace Eadent.RapidFailNotify.Helpers
 {
@@ -11,7 +12,9 @@ namespace Eadent.RapidFailNotify.Helpers
     {
         public static void Send(string toEMailName, string toEMailAddress, string subject, string htmlBody)
         {
-            string eMailSettingsFilePath = "App_Data/Confidential/E-Mail.settings.json";  // TODO: Consider obtaining from Configuration.
+            var binFolder = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+
+            string eMailSettingsFilePath = Path.Combine(binFolder, "App_Data/Confidential/E-Mail.settings.json");  // TODO: Consider obtaining from Configuration.
 
             string eMailSettingsString = File.ReadAllText(eMailSettingsFilePath);
 
