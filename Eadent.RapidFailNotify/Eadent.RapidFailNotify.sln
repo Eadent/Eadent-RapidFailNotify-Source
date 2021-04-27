@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eadent.RapidFailNotify", "Eadent.RapidFailNotify\Eadent.RapidFailNotify.csproj", "{8B119377-A09E-43D5-9AA1-321D9D4C481A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B119377-A09E-43D5-9AA1-321D9D4C481A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B119377-A09E-43D5-9AA1-321D9D4C481A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B119377-A09E-43D5-9AA1-321D9D4C481A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B119377-A09E-43D5-9AA1-321D9D4C481A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37708F07-6235-4FDC-807E-0E47890384D1}
+	EndGlobalSection
+EndGlobal
