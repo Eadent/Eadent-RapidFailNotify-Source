@@ -9,7 +9,7 @@ namespace Eadent.RapidFailNotify
         {
             int exitCode = 0;
 
-            string applicationNamePool = null;
+            string applicationPoolName = null;
             string eMailName = null;
             string eMailAddress = null;
 
@@ -21,7 +21,7 @@ namespace Eadent.RapidFailNotify
             {
                 if (string.Equals(args[0], "-ApplicationPoolName", StringComparison.OrdinalIgnoreCase))
                 {
-                    applicationNamePool = args[1];
+                    applicationPoolName = args[1];
                 }
 
                 if (string.Equals(args[2], "-EMailName", StringComparison.OrdinalIgnoreCase))
@@ -34,7 +34,7 @@ namespace Eadent.RapidFailNotify
                     eMailAddress = args[5];
                 }
 
-                if ((applicationNamePool == null) || (eMailName == null) || (eMailAddress == null))
+                if ((applicationPoolName == null) || (eMailName == null) || (eMailAddress == null))
                 {
                     exitCode = -2;
                 }
@@ -43,12 +43,12 @@ namespace Eadent.RapidFailNotify
                     DateTime utcNow = DateTime.UtcNow;
 
                     string htmlBody = $"The IIS Rapid Fail Protection has been invoked.<br><br>" +
-                        $"Application Pool Name: <strong>{applicationNamePool}</strong><br><br>" +
+                        $"Application Pool Name: <strong>{applicationPoolName}</strong><br><br>" +
                         $"Machine Name: <strong>{Environment.MachineName}</strong><br><br>" +
                         $"Date & Time (UTC): <strong>{utcNow:dddd, d-MMM-yyyy h:mm:ss tt}</strong><br><br>" +
                         $"Date & Time (Local): <strong>{utcNow.ToLocalTime():dddd, d-MMM-yyyy h:mm:ss tt}</strong>";
 
-                    EMail.Send(eMailName, eMailAddress, $"IIS Rapid Fail Protection: {applicationNamePool}", htmlBody);
+                    EMail.Send(eMailName, eMailAddress, $"IIS Rapid Fail Protection: {applicationPoolName}", htmlBody);
                 }
             }
 
