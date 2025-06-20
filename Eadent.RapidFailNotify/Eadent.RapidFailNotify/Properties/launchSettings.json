@@ -1,7 +1,8 @@
 {
   "profiles": {
     "Eadent.RapidFailNotify": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "-ApplicationPoolName ProofOfConcept -EMailName \"Eamonn Duffy\" -EMailAddress Eamonn.Duffy@GMail.com"
     }
   }
 }
